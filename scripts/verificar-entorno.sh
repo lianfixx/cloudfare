@@ -74,8 +74,23 @@ if [ ! -d "$HOME/.claude" ] && [ ! -d "$HOME/.codex" ] && ! command -v claude >/
   falta "No encontré Claude Code ni Codex en esta computadora"
 fi
 
-# 5. Plugin de Claude Code (no se puede revisar desde aquí con certeza)
-nota "Plugin de Claude Code: dentro de Claude Code corre /plugin marketplace add cloudflare/skills y /plugin install cloudflare@cloudflare"
+# 5. Plugin de Cloudflare en Claude Code (cualquier marketplace: cloudflare@...)
+if [ -d "$HOME/.claude" ]; then
+  estado=$(node -e '
+    const fs = require("fs"), dir = process.argv[1];
+    const leer = f => { try { return JSON.parse(fs.readFileSync(dir + "/" + f, "utf8")); } catch { return {}; } };
+    const ids = Object.keys(leer("plugins/installed_plugins.json").plugins || {}).filter(k => k.startsWith("cloudflare@"));
+    if (!ids.length) { console.log("no"); process.exit(); }
+    const activos = leer("settings.json").enabledPlugins || {};
+    const id = ids.find(k => activos[k] !== false);
+    console.log(id ? "si " + id : "apagado " + ids[0]);
+  ' "$HOME/.claude" 2>/dev/null)
+  case "$estado" in
+    si\ *)      ok "Plugin de Cloudflare en Claude Code (${estado#si })" ;;
+    apagado\ *) nota "Plugin ${estado#apagado } instalado pero desactivado: actívalo con /plugin en Claude Code" ;;
+    *)          nota "Plugin de Cloudflare (opcional) no instalado: en Claude Code corre /plugin marketplace add cloudflare/skills y /plugin install cloudflare@cloudflare" ;;
+  esac
+fi
 
 echo
 if [ "$FALTAS" = 0 ]; then
