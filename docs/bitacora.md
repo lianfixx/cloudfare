@@ -17,8 +17,11 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-11 | Claude (Mac) | Mejoró `verificar-entorno.sh` para revisar el plugin | hecho | Commit 12b2c9e.
 - 2026-11-11 | Emi | Decisión: Muse (no Manus) replica el entorno con acceso completo a Cloudflare | decidido | Mismas reglas que Claude: pregunta antes de gastar, borrar, cambiar DNS o publicar.
 - 2026-11-11 | Emi | Decisión: todo se registra y se actualiza solo, sin que Emi haga nada | vigente | Regla en CLAUDE.md, encargo de Muse y tarea semanal de actualización.
+- 2026-11-11 | Claude (nube) | Tarea programada semanal «Actualizar entorno Cloudflare» (domingos 11:58, Ciudad de México) | creada | Revisa versión de cf, documentación oficial y esta bitácora; corrige los docs y anota aquí. Avisa al celular.
+- 2026-11-11 | Claude (nube) | Observación al selector: este trabajo con Fable fue sobrado (Opus medium bastaba) | registrada | selector-modelos/perfil/observaciones.md
 
 ## Pendientes
 
 - Confirmar en la Mac que `scripts/verificar-entorno.sh` termina en «Listo».
 - Recibir el reporte de Muse y registrarlo aquí.
+- Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
