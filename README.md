@@ -15,6 +15,7 @@ su guía en PDF y la documentación oficial de `cf`, leída el 11-nov-2026.
 | [`docs/prompt-muse.md`](docs/prompt-muse.md) | Encargo para que Muse replique el entorno y ayude si hay atorones |
 | [`docs/referencia.md`](docs/referencia.md) | Comandos, plan gratis, glosario y lo que el video no dice |
 | [`scripts/verificar-entorno.sh`](scripts/verificar-entorno.sh) | Revisa que todo esté listo; con `--instalar`, instala lo que falte |
+| [`docs/bitacora.md`](docs/bitacora.md) | Todo lo que ha pasado: acciones, errores, decisiones y pendientes. Se llena sola |
 | [`CLAUDE.md`](CLAUDE.md) | Reglas para cualquier agente que use Cloudflare |
 
 ## Inicio rápido (en tu Mac)
