@@ -1,31 +1,27 @@
 # cloudfare
 
-Infraestructura en Cloudflare para los proyectos de Emi, hecha a partir del video
-«Cloudflare acaba de hacer a Claude Code 10 veces más poderoso» de Santi Muñoz (9-oct-2026)
-y de su guía en PDF con ocho proyectos.
+Entorno para que Claude Code o Codex trabajen con Cloudflare a través del CLI oficial `cf`.
+Solo la conexión y las reglas; no incluye proyectos.
 
-## Qué hay aquí
+Basado en el video «Cloudflare acaba de hacer a Claude Code 10 veces más poderoso» (Santi Muñoz, 9-oct-2026),
+su guía en PDF y la documentación oficial de `cf`, leída el 11-nov-2026.
 
-| Carpeta | Qué es | Estado |
-|---|---|---|
-| [`milla-backend/`](milla-backend/) | Backend de MILLA ABOGADOS: Buzón Jurídico, agenda sin choques, asistente, panel privado, enlaces cortos y resumen diario | Código completo con 24 pruebas que pasan. **Sin publicar**: falta que Emi inicie sesión en Cloudflare |
-| [`docs/analisis-video.md`](docs/analisis-video.md) | Análisis razonado del video y del PDF, con lo que se verificó y lo que no | Completo |
-| [`docs/viabilidad.md`](docs/viabilidad.md) | En qué proyectos de Emi conviene aplicarlo y en cuáles no | Completo |
-| [`docs/puesta-en-marcha.md`](docs/puesta-en-marcha.md) | Los pasos que solo Emi puede hacer para publicar | Pendiente de Emi |
-| [`docs/conectar-sitio-milla.md`](docs/conectar-sitio-milla.md) | Cómo conectar el formulario de millabogados.com al backend | Propuesta; no se tocó el repo del sitio |
-| [`docs/prompts.md`](docs/prompts.md) | Los prompts de la guía, adaptados a los proyectos de Emi | Completo |
+## Contenido
 
-## Probar el backend
+| Archivo | Para qué |
+|---|---|
+| [`docs/configurar-entorno.md`](docs/configurar-entorno.md) | Guía paso a paso: instalar, iniciar sesión, conectar el agente y verificar |
+| [`docs/prompt-preparacion.md`](docs/prompt-preparacion.md) | El prompt para que el agente haga la configuración por ti |
+| [`docs/referencia.md`](docs/referencia.md) | Comandos, plan gratis, glosario y lo que el video no dice |
+| [`scripts/verificar-entorno.sh`](scripts/verificar-entorno.sh) | Revisa que todo esté listo; con `--instalar`, instala lo que falte |
+| [`CLAUDE.md`](CLAUDE.md) | Reglas para cualquier agente que use Cloudflare |
+
+## Inicio rápido (en tu Mac)
 
 ```bash
-cd milla-backend
-npm test        # 24 pruebas, sin instalar nada; usa Node 22.18 o superior
+bash scripts/verificar-entorno.sh             # solo revisa, no cambia nada
+bash scripts/verificar-entorno.sh --instalar  # instala cf y agrega la regla a tu CLAUDE.md
+cf auth login                                 # este paso lo haces tú en el navegador
 ```
 
-Las pruebas corren con Node y una base SQLite en memoria que imita a D1.
-Todavía no se ha corrido dentro del runtime de Cloudflare (`cf dev`); ese es el primer paso de la puesta en marcha.
-
-## Reglas
-
-Lee [`CLAUDE.md`](CLAUDE.md) antes de tocar algo. Lo esencial: usar `cf`, ensayar con `--dry-run`,
-preguntar antes de gastar o borrar, y ninguna clave en el código.
+`cf` está en beta: sus comandos pueden cambiar. Ante la duda, `cf cli search "<tarea>"`.

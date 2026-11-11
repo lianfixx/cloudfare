@@ -1,7 +1,0 @@
-# Copia este archivo como .dev.vars para probar en tu computadora. No se sube a GitHub.
-ADMIN_PASSWORD=cambia-esto
-SESSION_SECRET=cambia-esto-por-32-caracteres-o-mas
-TURNSTILE_SECRET=
-TELEGRAM_BOT_TOKEN=
-TELEGRAM_CHAT_ID=
-TURNSTILE_OBLIGATORIO=no
