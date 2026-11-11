@@ -12,6 +12,7 @@ su guía en PDF y la documentación oficial de `cf`, leída el 11-nov-2026.
 |---|---|
 | [`docs/configurar-entorno.md`](docs/configurar-entorno.md) | Guía paso a paso: instalar, iniciar sesión, conectar el agente y verificar |
 | [`docs/prompt-preparacion.md`](docs/prompt-preparacion.md) | El prompt para que el agente haga la configuración por ti |
+| [`docs/prompt-manus.md`](docs/prompt-manus.md) | Encargo para que Manus replique el entorno y ayude si hay atorones |
 | [`docs/referencia.md`](docs/referencia.md) | Comandos, plan gratis, glosario y lo que el video no dice |
 | [`scripts/verificar-entorno.sh`](scripts/verificar-entorno.sh) | Revisa que todo esté listo; con `--instalar`, instala lo que falte |
 | [`CLAUDE.md`](CLAUDE.md) | Reglas para cualquier agente que use Cloudflare |
