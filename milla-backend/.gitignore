@@ -1,0 +1,9 @@
+node_modules/
+.cloudflare/
+.wrangler/
+.dev.vars*
+.env*
+secretos.json
+!secretos.ejemplo.json
+!.dev.vars.ejemplo
+dist/
