@@ -1,10 +1,10 @@
-# Encargo para Manus
+# Encargo para Muse
 
-Para pegar en Manus. Su objetivo es tener una copia del mismo entorno en su computadora virtual
+Para pegar en Muse, el asistente operador de Emi (Meta). Su objetivo es tener una copia del mismo entorno en su computadora virtual
 y poder ayudar a Emi si se atora.
 
 ```text
-Hola, Manus. Necesito que repliques en tu computadora virtual el entorno de Cloudflare que acabo de
+Hola, Muse. Necesito que repliques en tu computadora virtual el entorno de Cloudflare que acabo de
 configurar en mi Mac, para que me ayudes si me atoro. Hazlo solo si tu entorno lo permite; si un paso
 no se puede, sáltalo y dime cuál y por qué. No inventes resultados.
 
@@ -47,5 +47,5 @@ reprodúcelo en tu entorno si puedes y dime el paso exacto para resolverlo.
 
 ## Por qué así
 
-- **Manus no entra con tu cuenta de Cloudflare.** Si lo hiciera, su computadora virtual tendría acceso a todo lo tuyo. Para ayudarte con errores le basta tener `cf` instalado; si algún día hace falta, tú apruebas el inicio de sesión desde tu navegador.
-- **El plugin de Claude Code puede no ser posible ahí**, porque pide iniciar sesión en Claude. No es necesario para que Manus te ayude.
+- **Muse no entra con tu cuenta de Cloudflare.** Si lo hiciera, su computadora virtual tendría acceso a todo lo tuyo. Para ayudarte con errores le basta tener `cf` instalado; si algún día hace falta, tú apruebas el inicio de sesión desde tu navegador.
+- **El plugin de Claude Code puede no ser posible ahí**, porque pide iniciar sesión en Claude. No es necesario para que Muse te ayude.
