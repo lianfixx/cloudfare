@@ -43,6 +43,8 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 
 - 2026-11-12 | Emi (Mac) | `npm install --global cf@latest`: de v0.15.0 a 1.0.0-beta.31 | hecho | Script todo ✓.
 - 2026-11-12 | Claude (Mac) | npm avisó «allow-scripts» sobre el postinstall de `workerd` | sin efecto | El binario de `workerd` llega como paquete por plataforma (`workerd-darwin-arm64`) y funciona; no hay que autorizar el script.
+- 2026-11-12 | Claude (nube, proyecto APJ) | Primera publicación de APJ en la cuenta de Emi: D1, R2 y Worker en workers.dev | hecho | Autorizada por Emi. El token necesitó permisos de edición (D1, R2 Storage, Workers Scripts).
+- 2026-11-12 | Claude (nube) | `wrangler deploy` desde la nube → 401 al subir archivos estáticos | resuelto | El proxy de la sesión reemplaza el permiso temporal de subida con el token guardado. Se publicó desde el Box de Emi con `wrangler login`. El callback local de `wrangler login` vence rápido: hay que aprobar en cuanto aparece.
 
 ## Pendientes
 
