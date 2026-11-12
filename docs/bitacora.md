@@ -48,10 +48,10 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-12 | Claude (nube, sesión de la Matriz) | Decisión de Emi: «para nada quiero que me pidan códigos» | hecho | GitHub y Cloudflare no tienen verificación en 2 pasos; los códigos venían de las páginas (confirmar identidad) y del inicio de sesión. Se resolvió con tokens de API en la computadora virtual, sin usar el panel.
 - 2026-11-12 | Claude (nube, sesión de la Matriz) | Token «Proyectos de Emi (cf y wrangler)» creado por API y cargado en la computadora virtual | hecho | Workers, Pages, D1, R2, KV y lectura de la cuenta; vence el 12-nov-2027. Probado: lista los Workers de la cuenta.
 - 2026-11-12 | Claude (nube, sesión de la Matriz) | Vencimiento puesto al token «CLAUDE» del entorno «Accion Tlalnepantla» (12-nov-2027) | hecho | Cierra el pendiente de Emi. Hallazgo: ese token tiene casi todos los permisos de la cuenta (incluye facturación, DNS y crear tokens); conviene reemplazarlo por uno limitado. Pendiente de decisión de Emi.
+- 2026-11-12 | Emi | Decisión: el token «CLAUDE» del entorno «Accion Tlalnepantla» se queda con todos sus permisos («no limites nada») y la verificación en 2 pasos de Google se queda activa; en GitHub y Cloudflare no hay verificación en 2 pasos que quitar | decidido | Lo que pedía códigos eran las páginas; los agentes usan tokens de API.
 
 ## Pendientes
 
-- Emi decide si el token «CLAUDE» del entorno «Accion Tlalnepantla» se reemplaza por uno con solo lo que APJ necesita (hoy tiene casi todos los permisos de la cuenta).
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
