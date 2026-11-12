@@ -34,6 +34,10 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 
 - 2026-11-12 | Claude (nube) | Tarea semanal actualizada: ahora prueba los comandos reales de `cf` sin iniciar sesión y no cambia el script ni CLAUDE.md por su cuenta (los deja en Pendientes) | hecho | Próxima corrida: domingo 15-nov-2026, 11:58 de Ciudad de México.
 - 2026-11-12 | Claude (nube) | Revisión de cierre: todo lo hecho en la conversación está en el repo y en esta bitácora | hecho | Selector: observación del 11-nov ya registrada en selector-modelos.
+- 2026-11-12 | Claude (nube, proyecto APJ) | Instaló `cf` 1.0.0-beta.31 en la sesión y probó `cf migrate --dry-run` en el sitio de Acción Tlalnepantla | hecho | Sin `wrangler.*` responde «No Wrangler config found»: el proyecto define sus bindings dentro de `vite.config.ts`. Con un `wrangler.jsonc` equivalente propone `cloudflare.config.ts` y pide `@cloudflare/vite-plugin@beta`.
+- 2026-11-12 | Claude (nube) | `cf auth login --no-browser` → «fetch failed» | resuelto | En la nube hacen falta dos cosas: permitir `dash.cloudflare.com`, `api.cloudflare.com` y `workers.cloudflare.com` en la red del entorno, y correr `cf` con `NODE_USE_ENV_PROXY=1` (el `fetch` de Node no usa el proxy por sí solo).
+- 2026-11-12 | Emi | Tres códigos de inicio de sesión vencieron (duran 5 minutos) | resuelto | Emi guardó un token de API en el formulario seguro del entorno de la sesión; `cf` funciona con `CLOUDFLARE_API_TOKEN=proxy-injected`. El token no tiene fecha de vencimiento: pendiente ponérsela.
+- 2026-11-12 | Claude (nube) | Inventario de solo lectura de la cuenta de Emi para la migración de APJ | hecho | R2 no está activado; el dominio de APJ no está en la cuenta (DNS en otro proveedor). No se creó ni borró nada.
 
 - 2026-11-12 | Claude (Mac) | `git pull` y nueva corrida del script tras la auditoría | hecho | Sesión confirmada con la revisión nueva; todo ✓. La Mac tiene `cf` v0.15.0 y ya existe 1.0.0-beta.31.
 
@@ -42,6 +46,7 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 
 ## Pendientes
 
+- Emi: ponerle fecha de vencimiento al token de API guardado en el entorno «Accion Tlalnepantla».
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
