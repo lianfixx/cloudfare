@@ -32,6 +32,9 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-12 | Claude (nube) | Codex instala el plugin con `/plugins` (no con `/plugin marketplace`) | documentado | developers.cloudflare.com/agent-setup/codex/
 - 2026-11-12 | Claude (nube) | La rama `claude/adoring-gauss-sd3kbr` es la única y la predeterminada del repo | confirmado | `git clone` sin `-b` ya trae todo.
 
+- 2026-11-12 | Claude (nube) | Tarea semanal actualizada: ahora prueba los comandos reales de `cf` sin iniciar sesión y no cambia el script ni CLAUDE.md por su cuenta (los deja en Pendientes) | hecho | Próxima corrida: domingo 15-nov-2026, 11:58 de Ciudad de México.
+- 2026-11-12 | Claude (nube) | Revisión de cierre: todo lo hecho en la conversación está en el repo y en esta bitácora | hecho | Selector: observación del 11-nov ya registrada en selector-modelos.
+
 ## Pendientes
 
 - Emi: en la Mac, `cd ~/cloudfare && git pull` y volver a correr `bash scripts/verificar-entorno.sh`. El resultado anterior pudo dar ✓ falso en «Sesión».
