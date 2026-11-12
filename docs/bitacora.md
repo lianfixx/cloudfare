@@ -35,9 +35,11 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-12 | Claude (nube) | Tarea semanal actualizada: ahora prueba los comandos reales de `cf` sin iniciar sesión y no cambia el script ni CLAUDE.md por su cuenta (los deja en Pendientes) | hecho | Próxima corrida: domingo 15-nov-2026, 11:58 de Ciudad de México.
 - 2026-11-12 | Claude (nube) | Revisión de cierre: todo lo hecho en la conversación está en el repo y en esta bitácora | hecho | Selector: observación del 11-nov ya registrada en selector-modelos.
 
+- 2026-11-12 | Claude (Mac) | `git pull` y nueva corrida del script tras la auditoría | hecho | Sesión confirmada con la revisión nueva; todo ✓. La Mac tiene `cf` v0.15.0 y ya existe 1.0.0-beta.31.
+
 ## Pendientes
 
-- Emi: en la Mac, `cd ~/cloudfare && git pull` y volver a correr `bash scripts/verificar-entorno.sh`. El resultado anterior pudo dar ✓ falso en «Sesión».
+- Emi: decidir si actualiza `cf` en la Mac de v0.15.0 a 1.0.0-beta.31 (`npm install --global cf@latest`).
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
