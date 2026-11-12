@@ -37,9 +37,11 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 
 - 2026-11-12 | Claude (Mac) | `git pull` y nueva corrida del script tras la auditoría | hecho | Sesión confirmada con la revisión nueva; todo ✓. La Mac tiene `cf` v0.15.0 y ya existe 1.0.0-beta.31.
 
+- 2026-11-12 | Emi (Mac) | `npm install --global cf@latest`: de v0.15.0 a 1.0.0-beta.31 | hecho | Script todo ✓.
+- 2026-11-12 | Claude (Mac) | npm avisó «allow-scripts» sobre el postinstall de `workerd` | sin efecto | El binario de `workerd` llega como paquete por plataforma (`workerd-darwin-arm64`) y funciona; no hay que autorizar el script.
+
 ## Pendientes
 
-- Emi: decidir si actualiza `cf` en la Mac de v0.15.0 a 1.0.0-beta.31 (`npm install --global cf@latest`).
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
