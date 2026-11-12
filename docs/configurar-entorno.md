@@ -115,14 +115,17 @@ cf auth activate despacho        # ese proyecto usa el perfil despacho
 cf auth list                     # ver perfiles
 ```
 
-## Opcional: agentes sin persona (tareas programadas, CI, sesiones en la nube)
+## Sin iniciar sesión: tokens de API (decisión de Emi, 12-nov-2026)
 
-No pueden aprobar `cf auth login`. Usan un token de API:
+Emi pidió que ni GitHub ni Cloudflare le vuelvan a pedir códigos ni aprobaciones. Por eso los agentes no usan `cf auth login`: usan un token de API, que tiene prioridad sobre cualquier sesión.
 
-1. Panel de Cloudflare → Mi perfil → API Tokens → crear token con **solo** los permisos que necesite la tarea y con fecha de vencimiento.
-2. Guárdalo como variable o secreto del entorno, nunca en el código: `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`.
+| Dónde | Token | Cómo lo toma `cf` (y `wrangler`) |
+|---|---|---|
+| Computadora virtual de Emi (box «main») | «Proyectos de Emi (cf y wrangler)»: Workers, Pages, D1, R2, KV y lectura de la cuenta; sin dominios, DNS ni facturación; vence el 12-nov-2027 | `~/.bashrc` y `~/.profile` exportan `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID` desde `~/.config/matriz/` |
+| Sesiones en la nube del proyecto APJ | El guardado en el formulario seguro del entorno «Accion Tlalnepantla» (vence el 12-nov-2027) | `CLOUDFLARE_API_TOKEN=proxy-injected` |
+| Mac de Emi | Ninguno: ahí `cf auth login` lo aprueba Emi una sola vez y la sesión se guarda | Sesión de `cf` |
 
-El token tiene prioridad sobre cualquier sesión. Hoy no hay ninguno configurado; la tarea semanal no lo necesita.
+Crear, renovar o ponerle vencimiento a un token ya no requiere el panel (que pide verificación): en la computadora virtual, la llave «Matriz administración (Claude)» lo hace por la API. Ver `docs/PANEL.md` («Mantenimiento sin códigos») en lianfixx/MATRIZ. Ningún valor se escribe en el repositorio, la bitácora ni el chat.
 
 ## Si algo falla
 

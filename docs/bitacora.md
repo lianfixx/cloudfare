@@ -45,10 +45,13 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-12 | Claude (Mac) | npm avisó «allow-scripts» sobre el postinstall de `workerd` | sin efecto | El binario de `workerd` llega como paquete por plataforma (`workerd-darwin-arm64`) y funciona; no hay que autorizar el script.
 - 2026-11-12 | Claude (nube, proyecto APJ) | Primera publicación de APJ en la cuenta de Emi: D1, R2 y Worker en workers.dev | hecho | Autorizada por Emi. El token necesitó permisos de edición (D1, R2 Storage, Workers Scripts).
 - 2026-11-12 | Claude (nube) | `wrangler deploy` desde la nube → 401 al subir archivos estáticos | resuelto | El proxy de la sesión reemplaza el permiso temporal de subida con el token guardado. Se publicó desde el Box de Emi con `wrangler login`. El callback local de `wrangler login` vence rápido: hay que aprobar en cuanto aparece.
+- 2026-11-12 | Claude (nube, sesión de la Matriz) | Decisión de Emi: «para nada quiero que me pidan códigos» | hecho | GitHub y Cloudflare no tienen verificación en 2 pasos; los códigos venían de las páginas (confirmar identidad) y del inicio de sesión. Se resolvió con tokens de API en la computadora virtual, sin usar el panel.
+- 2026-11-12 | Claude (nube, sesión de la Matriz) | Token «Proyectos de Emi (cf y wrangler)» creado por API y cargado en la computadora virtual | hecho | Workers, Pages, D1, R2, KV y lectura de la cuenta; vence el 12-nov-2027. Probado: lista los Workers de la cuenta.
+- 2026-11-12 | Claude (nube, sesión de la Matriz) | Vencimiento puesto al token «CLAUDE» del entorno «Accion Tlalnepantla» (12-nov-2027) | hecho | Cierra el pendiente de Emi. Hallazgo: ese token tiene casi todos los permisos de la cuenta (incluye facturación, DNS y crear tokens); conviene reemplazarlo por uno limitado. Pendiente de decisión de Emi.
 
 ## Pendientes
 
-- Emi: ponerle fecha de vencimiento al token de API guardado en el entorno «Accion Tlalnepantla».
+- Emi decide si el token «CLAUDE» del entorno «Accion Tlalnepantla» se reemplaza por uno con solo lo que APJ necesita (hoy tiene casi todos los permisos de la cuenta).
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
