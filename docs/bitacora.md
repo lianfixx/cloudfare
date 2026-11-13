@@ -56,6 +56,7 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-13 | Emi | Dominio de envío verificado en Resend y clave de envío guardada como secreto del Worker de APJ | hecho | La clave no pasó por el chat.
 - 2026-11-13 | Claude (nube, proyecto APJ) | Secreto de la dirección remitente cargado con `wrangler secret put` por entrada estándar | hecho | Así el valor no queda en el historial de la terminal.
 - 2026-11-13 | Claude (nube) | El Chrome del Box lo usaba otro agente al mismo tiempo; un clic cayó en otra pestaña | detenido | Si otro agente usa el escritorio del Box, no hacer clics: leer con `browser_fetch` y pedir a Emi el paso manual.
+- 2026-11-13 | Claude (nube, proyecto APJ) | Migración de D1 aplicada en remoto y nueva publicación del Worker de APJ | hecho | Autorizada por Emi. Para migraciones guardadas fuera de `migrations/`, usar una configuración temporal con `migrations_dir`.
 
 ## Pendientes
 
