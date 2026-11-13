@@ -49,9 +49,13 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-12 | Claude (nube, sesión de la Matriz) | Token «Proyectos de Emi (cf y wrangler)» creado por API y cargado en la computadora virtual | hecho | Workers, Pages, D1, R2, KV y lectura de la cuenta; vence el 12-nov-2027. Probado: lista los Workers de la cuenta.
 - 2026-11-12 | Claude (nube, sesión de la Matriz) | Vencimiento puesto al token «CLAUDE» del entorno «Accion Tlalnepantla» (12-nov-2027) | hecho | Cierra el pendiente de Emi. Hallazgo: ese token tiene casi todos los permisos de la cuenta (incluye facturación, DNS y crear tokens); conviene reemplazarlo por uno limitado. Pendiente de decisión de Emi.
 - 2026-11-12 | Emi | Decisión: el token «CLAUDE» del entorno «Accion Tlalnepantla» se queda con todos sus permisos («no limites nada») y la verificación en 2 pasos de Google se queda activa; en GitHub y Cloudflare no hay verificación en 2 pasos que quitar | decidido | Lo que pedía códigos eran las páginas; los agentes usan tokens de API.
+- 2026-11-13 | Claude (nube, proyecto APJ) | Republicación de APJ en workers.dev desde el Box | hecho | Autorizada por Emi. Sin migraciones; rutas públicas y PDF comprobados en línea.
+- 2026-11-13 | Claude (nube) | La sesión de `wrangler login` del Box había vencido; tres intentos fallaron (tiempo agotado y un «state» que no coincidía) | resuelto | Causa: la aprobación llegó tarde o correspondía a un intento anterior. Solución: cerrar los `wrangler login` viejos, lanzar uno solo y aprobar en la misma pestaña al instante. Abrir Chrome con otro proceso muestra la pantalla de primer uso: no hacerlo.
+- 2026-11-13 | Claude (nube, proyecto APJ) | Zona del dominio de APJ activa en la cuenta de Emi con los servidores de Cloudflare | hecho | El dominio sigue apuntando a Sites. Agregar el DKIM de Resend es cambio de DNS: espera el «sí» de Emi.
 
 ## Pendientes
 
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
+- Emi: «sí» para agregar el registro DKIM de Resend en la zona de APJ.
