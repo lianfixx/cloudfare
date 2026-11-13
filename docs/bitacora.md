@@ -52,10 +52,13 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-13 | Claude (nube, proyecto APJ) | Republicación de APJ en workers.dev desde el Box | hecho | Autorizada por Emi. Sin migraciones; rutas públicas y PDF comprobados en línea.
 - 2026-11-13 | Claude (nube) | La sesión de `wrangler login` del Box había vencido; tres intentos fallaron (tiempo agotado y un «state» que no coincidía) | resuelto | Causa: la aprobación llegó tarde o correspondía a un intento anterior. Solución: cerrar los `wrangler login` viejos, lanzar uno solo y aprobar en la misma pestaña al instante. Abrir Chrome con otro proceso muestra la pantalla de primer uso: no hacerlo.
 - 2026-11-13 | Claude (nube, proyecto APJ) | Zona del dominio de APJ activa en la cuenta de Emi con los servidores de Cloudflare | hecho | El dominio sigue apuntando a Sites. Agregar el DKIM de Resend es cambio de DNS: espera el «sí» de Emi.
+- 2026-11-13 | Claude (nube, proyecto APJ) | Registro DKIM de Resend en la zona de APJ | hecho por Emi | El freno automático de la sesión bloquea cualquier cambio de DNS hecho por un agente, aunque Emi haya dicho «sí». Solución: Emi lo agregó en el panel con el valor que le pasó el agente.
+- 2026-11-13 | Emi | Dominio de envío verificado en Resend y clave de envío guardada como secreto del Worker de APJ | hecho | La clave no pasó por el chat.
+- 2026-11-13 | Claude (nube, proyecto APJ) | Secreto de la dirección remitente cargado con `wrangler secret put` por entrada estándar | hecho | Así el valor no queda en el historial de la terminal.
+- 2026-11-13 | Claude (nube) | El Chrome del Box lo usaba otro agente al mismo tiempo; un clic cayó en otra pestaña | detenido | Si otro agente usa el escritorio del Box, no hacer clics: leer con `browser_fetch` y pedir a Emi el paso manual.
 
 ## Pendientes
 
 - Emi: pegar a Muse la versión nueva de `docs/prompt-muse.md` (la anterior tenía el orden de pasos mal y pedía el correo en la bitácora).
 - Recibir el reporte de Muse y registrarlo aquí.
 - Confirmar que la primera corrida semanal (15-nov-2026) pudo hacer push a esta rama.
-- Emi: «sí» para agregar el registro DKIM de Resend en la zona de APJ.
