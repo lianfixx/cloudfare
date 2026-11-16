@@ -59,6 +59,10 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-13 | Claude (nube, proyecto APJ) | Migración de D1 aplicada en remoto y nueva publicación del Worker de APJ | hecho | Autorizada por Emi. Para migraciones guardadas fuera de `migrations/`, usar una configuración temporal con `migrations_dir`.
 - 2026-11-13 | Emi | Dominio de APJ conectado al Worker: borró los registros A de Sites y agregó el dominio y `www` como dominios personalizados | hecho | Primero agregó solo `www`; sin el dominio principal, este quedó unos minutos sin respuesta. Agregar los dos antes de borrar los registros viejos.
 - 2026-11-13 | Claude (nube, proyecto APJ) | Origen público y hostname de Turnstile apuntados al dominio; nueva publicación | hecho | Comprobado con certificado válido y redirecciones desde `www`, workers.dev y `http`.
+- 2026-11-16 | Claude (nube, proyecto APJ) | Tres migraciones de D1 aplicadas en remoto y nueva publicación del Worker de APJ desde el Box | hecho | Autorizada por Emi. En el Box cada comando se lanza con `nohup` y se consulta su registro: la terminal remota corta a los 60 segundos.
+- 2026-11-16 | Claude (nube, proyecto APJ) | PDF de 4.2 MB subido a R2 desde la nube con la API (`PUT /accounts/<cuenta>/r2/buckets/<bucket>/objects/<clave>`) | hecho | Funciona con el token del entorno. `HEAD` sobre esa ruta responde 405; para comprobar la subida basta la respuesta del `PUT`, que trae el tamaño.
+- 2026-11-16 | Claude (nube, proyecto APJ) | Consulta de precios de Workers | hecho | `developers.cloudflare.com` no se alcanza desde la sesión en la nube; se leyó desde el navegador del Box.
+- 2026-11-16 | Claude (nube, proyecto APJ) | Workers Paid sigue sin activarse en la cuenta de Emi | pendiente de Emi | El plan gratuito da 10 ms de CPU por solicitud y el ingreso con contraseña de APJ los rebasa. Emi dijo que lo paga; es su decisión y su pago.
 
 ## Pendientes
 
