@@ -63,6 +63,8 @@ Formato: `fecha | quién | qué pasó | resultado | aprendizaje o pendiente`
 - 2026-11-16 | Claude (nube, proyecto APJ) | PDF de 4.2 MB subido a R2 desde la nube con la API (`PUT /accounts/<cuenta>/r2/buckets/<bucket>/objects/<clave>`) | hecho | Funciona con el token del entorno. `HEAD` sobre esa ruta responde 405; para comprobar la subida basta la respuesta del `PUT`, que trae el tamaño.
 - 2026-11-16 | Claude (nube, proyecto APJ) | Consulta de precios de Workers | hecho | `developers.cloudflare.com` no se alcanza desde la sesión en la nube; se leyó desde el navegador del Box.
 - 2026-11-16 | Claude (nube, proyecto APJ) | Workers Paid sigue sin activarse en la cuenta de Emi | pendiente de Emi | El plan gratuito da 10 ms de CPU por solicitud y el ingreso con contraseña de APJ los rebasa. Emi dijo que lo paga; es su decisión y su pago.
+- 2026-11-17 | Claude (nube, proyecto APJ) | Diagnóstico de lentitud del panel con Workers Logs (consulta a la API de telemetría) | hecho | El tiempo de pared era de 1.2 a 3 s con unos 30 ms de CPU: eran consultas a D1 en serie desde DFW hacia una base en ENAM. Se agruparon consultas y se activó `placement: { mode: "smart" }` en la configuración del Worker.
+- 2026-11-17 | Claude (nube, proyecto APJ) | Smart Placement activo en el Worker de APJ | hecho | Cloudflare puede tardar hasta 15 minutos en analizarlo y, con poco tráfico, puede quedarse en `local-…` (cabecera `cf-placement`). Los archivos estáticos no cambian de lugar.
 
 ## Pendientes
 
